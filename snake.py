@@ -51,9 +51,7 @@ class Snake:
         self.add_segment(self.segments[-1].position())
 
     def head_collides_with_tail(self):
-        for segment in self.segments:
-            if segment == self.head:
-                pass
-            elif self.head.heading() != segment.heading() and self.head.distance(segment) < 5:
+        for segment in self.segments[1::1]:
+            if self.head.heading() != segment.heading() and self.head.distance(segment) < 5:
                 return True
 
