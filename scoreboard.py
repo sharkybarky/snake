@@ -33,9 +33,8 @@ class Scoreboard(Turtle):
         # if this games score is higher, save high score
         try:
             fd = None
-            # with open("./high_score.txt", "a+t") as fd:  # use append "plus" mode for read/write, and creation if file doesn't exist
-            # use append + mode for read/write, and creation if file doesn't exist
-            with open("D:/Dropbox/Documents/altech UEC test.txt", "a+") as fd:
+            # use append "plus" mode for read/write, and creation if file doesn't exist
+            with open("./high_score.txt", "a+t") as fd:
                 fd.seek(0)
                 contents = fd.read()
                 print(type(contents))
